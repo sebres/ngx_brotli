@@ -103,7 +103,7 @@ if [ "$ngx_module_link" != DYNAMIC ]; then
                          | sed "s/$next/$next $ngx_module_name/"`
 fi
 
-if [ "$NGX_MSVC_VER" = "" ]; then
+if [ "$ngx_msvc_ver" = "" -a "$NGX_MSVC_VER" = "" ]; then
     CFLAGS="$CFLAGS -Wno-deprecated-declarations"
 else  # MSVC
     CFLAGS="$CFLAGS -Y- -wd4127 -wd4189 -wd4201 -wd4334 -wd4702"
